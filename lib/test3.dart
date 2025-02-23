@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//Switch case da qildm
 class ImageTestScreen extends StatefulWidget {
   const ImageTestScreen({super.key});
 
@@ -54,6 +55,7 @@ class _ImageTestScreenState extends State<ImageTestScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: Center(
@@ -76,7 +78,7 @@ class _ImageTestScreenState extends State<ImageTestScreen> {
                   controller: _text,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
-                    label: Text('Switch number'),
+                    label: Text('Enter number'),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -87,14 +89,19 @@ class _ImageTestScreenState extends State<ImageTestScreen> {
               SizedBox(height: 20),
               InkWell(
                 onTap: updateImage,
-                child: Container(
-                  width: 130,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(10)
-                  ),
-                  child: Center(child: Text('Search Image',style: TextStyle(color: Colors.white),))),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  child: Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Center(
+                          child: Text(
+                        'Search Image',
+                        style: TextStyle(color: Colors.white),
+                      ))),
+                ),
               ),
             ],
           ),
