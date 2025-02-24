@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:if_else/GridConstants.dart';
 import 'package:if_else/test1.dart';
+import 'package:if_else/test10.dart';
 import 'package:if_else/test2.dart';
 import 'package:if_else/test3.dart';
 import 'package:if_else/test4.dart';
+import 'package:if_else/test5.dart';
+import 'package:if_else/test6.dart';
+import 'package:if_else/test7.dart';
+import 'package:if_else/test8.dart';
+import 'package:if_else/test9.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +38,7 @@ class _MyAppState extends State<MyApp> {
               Container(
                 padding: EdgeInsets.all(15),
                 width: double.infinity,
-                height: 400,
+                height: 500,
                 child: GridView(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
@@ -53,7 +59,33 @@ class _MyAppState extends State<MyApp> {
                       page: ImageTestScreen(),
                     ),
                     PageContainer(
-                        pageName: 'Comparison', page: NumberComparisonScreen())
+                      pageName: 'Comparison',
+                      page: NumberComparisonScreen(),
+                    ),
+                    PageContainer(
+                      pageName: 'Role Checker',
+                      page: RoleChecker(),
+                    ),
+                    PageContainer(
+                      pageName: 'Temperature',
+                      page: TemperatureAdvice(),
+                    ),
+                    PageContainer(
+                      pageName: 'AgeCalculator',
+                      page: AgeCalculator(),
+                    ),
+                    PageContainer(
+                      pageName: 'Registration',
+                      page: RegistrationScreen(),
+                    ),
+                    PageContainer(
+                      pageName: 'EvenOdd',
+                      page: EvenOddChecker(),
+                    ),
+                    PageContainer(
+                      pageName: 'DayFider',
+                      page: WeekdayFinder(),
+                    ),
                   ],
                 ),
               )
